@@ -5,106 +5,236 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FotoGrafas</title>
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="#">SVG</a>
+    <header class="page-header">
+      <div class="container">
+        <nav class="site-nav">
+          <a class="logo" href="#">
+            <svg class="logo__icon" aria-label="site logo" width="56" height="16">
+              <use href="./images/icons.svg#icon-mobile-logo"></use>
+            </svg>
+          </a>
 
-        <div class="menu-container">
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
+          <button class="menu-btn" type="button">
+            <svg class="menu-btn__icon" aria-label="open menu button" width="40" height="40">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
 
-            <li>
-              <a href="#">Services</a>
-            </li>
+          <div class="menu-container">
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
 
-            <li>
-              <a href="#">Gallery</a>
-            </li>
+              <li>
+                <a href="#">Services</a>
+              </li>
 
-            <li>
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+              <li>
+                <a href="#">Gallery</a>
+              </li>
+
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <!-- Hero  -->
-    <section>
-      <h1>Ready to make you look rad with photography.</h1>
+    <section class="hero-section">
+      <div class="container">
+        <h1 class="hero-section__title">Ready to make you look rad with photography.</h1>
 
-      <a href="#">Book us now</a>
+        <button class="btn hero-section__btn" type="button">Book us now</button>
+      </div>
     </section>
 
     <!-- works  -->
-    <section>
-      <h2>Latest work</h2>
+    <section class="section section--big-top-padding">
+      <div class="container">
+        <h2 class="section__title">Latest work</h2>
 
-      <ul>
-        <li>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Laoreet habitant facilisis
-            sapien massa duis. Consequat, vitae elit pellentesque fringilla. Non a, neque vitae
-            dictum arcu.
-          </p>
+        <ul class="works-list">
+          <li class="works-list__item">
+            <div class="work-thumb">
+              <div class="work-thumb__container">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile-images/mobile-work-img-1.webp    1x,
+                      ./images/mobile-images/mobile-work-img-1@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile-images/mobile-work-img-1.jpeg    1x,
+                      ./images/mobile-images/mobile-work-img-1@2x.jpeg 2x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img src="./images/mobile-images/mobile-work-img-1.jpg" alt="Beautiful girl" />
+                </picture>
 
-          <h3>Debby Linchen</h3>
+                <div class="work-thumb__box-title">
+                  <h3 class="work-thumb__title">Debby Linchen</h3>
+                </div>
+              </div>
 
-          <!-- <img src="" alt="" /> -->
+              <div class="box-work-info">
+                <p class="box-work-info__text">Ryan Dubik</p>
 
-          <p>Ryan Dubik</p>
+                <p class="box-work-info__text">
+                  <time class="box-work-info__time" datetime="2020-06-13">13 June, 2020</time>
+                </p>
+              </div>
+            </div>
 
-          <p><time datetime="2020-06-13">13 June, 2020</time></p>
-        </li>
+            <p class="works-list__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Laoreet habitant facilisis
+              sapien massa duis. Consequat, vitae elit pellentesque fringilla. Non a, neque vitae
+              dictum arcu.
+            </p>
+          </li>
 
-        <li>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Laoreet habitant facilisis
-            sapien massa duis. Consequat, vitae elit pellentesque fringilla. Non a, neque vitae
-            dictum arcu.
-          </p>
+          <li class="works-list__item">
+            <div class="work-thumb">
+              <div class="work-thumb__container work-thumb__container--reverse">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile-images/mobile-work-img-2.webp    1x,
+                      ./images/mobile-images/mobile-work-img-2@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile-images/mobile-work-img-2.jpeg    1x,
+                      ./images/mobile-images/mobile-work-img-2@2x.jpeg 2x
+                    "
+                    type="image/jpeg"
+                  />
+                  <img src="./images/mobile-images/mobile-work-img-2.jpg" alt="Child" />
+                </picture>
 
-          <h3>Emily Draplin</h3>
+                <div class="work-thumb__box-title">
+                  <h3 class="work-thumb__title work-thumb__title--reverse">Emily Draplin</h3>
+                </div>
+              </div>
 
-          <!-- <img src="" alt="" /> -->
+              <div class="box-work-info">
+                <p class="box-work-info__text">Ryan Dubik</p>
 
-          <p>Ryan Dubik</p>
+                <p class="box-work-info__text">
+                  <time class="box-work-info__time" datetime="2020-06-13">13 June, 2020</time>
+                </p>
+              </div>
+            </div>
 
-          <p><time datetime="2020-06-13">13 June, 2020</time></p>
-        </li>
-      </ul>
+            <p class="works-list__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Laoreet habitant facilisis
+              sapien massa duis. Consequat, vitae elit pellentesque fringilla. Non a, neque vitae
+              dictum arcu.
+            </p>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <!-- Services  -->
-    <section>
-      <h2>Services</h2>
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Services</h2>
 
-      <ul>
-        <li>Lorem ipsum dolor sit amet,</li>
-        <li>Lorem ipsum dolor sit amet,</li>
-        <li>Lorem ipsum dolor sit amet,</li>
-        <li>Lorem ipsum dolor sit amet,</li>
-      </ul>
+        <ul class="services-imgs-list">
+          <li class="services-imgs-list__item">
+            <picture>
+              <source
+                srcset="
+                  ./images/mobile-images/mobile-services-img-1.webp    1x,
+                  ./images/mobile-images/mobile-services-img-1@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/mobile-images/mobile-services-img-1.jpeg    1x,
+                  ./images/mobile-images/mobile-services-img-1@2x.jpeg 2x
+                "
+                type="image/jpeg"
+              />
+              <img src="./images/mobile-images/mobile-services-img-1.jpg" alt="Photo camera" />
+            </picture>
+          </li>
 
-      <a href="#">See more</a>
+          <li class="services-imgs-list__item">
+            <picture>
+              <source
+                srcset="
+                  ./images/mobile-images/mobile-services-img-2.webp    1x,
+                  ./images/mobile-images/mobile-services-img-2@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/mobile-images/mobile-services-img-2.jpeg    1x,
+                  ./images/mobile-images/mobile-services-img-2@2x.jpeg 2x
+                "
+                type="image/jpeg"
+              />
+              <img
+                src="./images/mobile-images/mobile-services-img-2.jpg"
+                alt="Camera and photos on thr table"
+              />
+            </picture>
+          </li>
 
-      <ul>
-        <li>
-          <!-- <img src="" alt="" /> -->
-        </li>
+          <li class="services-imgs-list__item">
+            <picture>
+              <source
+                srcset="
+                  ./images/mobile-images/mobile-services-img-3.webp    1x,
+                  ./images/mobile-images/mobile-services-img-3@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/mobile-images/mobile-services-img-3.jpeg    1x,
+                  ./images/mobile-images/mobile-services-img-3@2x.jpeg 2x
+                "
+                type="image/jpeg"
+              />
+              <img src="./images/mobile-images/mobile-services-img-3.jpg" alt="Video camera" />
+            </picture>
+          </li>
+        </ul>
 
-        <li>
-          <!-- <img src="" alt="" /> -->
-        </li>
+        <ul class="services-list">
+          <li class="services-list__item">
+            Lorem ipsum dolor sit amet<span class="symbol-hidden">,</span>
+          </li>
+          <li class="services-list__item">
+            Lorem ipsum dolor sit amet<span class="symbol-hidden">,</span>
+          </li>
+          <li class="services-list__item">
+            Lorem ipsum dolor sit amet<span class="symbol-hidden">,</span>
+          </li>
+          <li class="services-list__item services-list__item--hidden">
+            Lorem ipsum dolor sit amet<span class="symbol-hidden">,</span>
+          </li>
+        </ul>
 
-        <li>
-          <!-- <img src="" alt="" /> -->
-        </li>
-      </ul>
+        <a class="btn btn--primary" href="#">See more</a>
+      </div>
     </section>
 
     <!-- Sessions  -->
