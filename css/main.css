@@ -449,6 +449,10 @@ img {
   color: #ffffff;
 }
 
+.works-list__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
 .work-thumb {
   display: flex;
   flex-wrap: wrap;
