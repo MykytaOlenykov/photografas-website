@@ -1,0 +1,45 @@
+body {
+  padding-top: 60px;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  color: $color-primary;
+
+  background-color: $color-primary-bg;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+  max-width: 375px;
+}
+
+.section {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  &--big-top-padding {
+    padding-top: 48px;
+  }
+}
+
+.section__title {
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+}
