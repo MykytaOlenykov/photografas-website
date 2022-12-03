@@ -74,8 +74,8 @@
                   />
                   <source
                     srcset="
-                      ./images/mobile-images/mobile-work-img-1.jpeg    1x,
-                      ./images/mobile-images/mobile-work-img-1@2x.jpeg 2x
+                      ./images/mobile-images/mobile-work-img-1.jpg    1x,
+                      ./images/mobile-images/mobile-work-img-1@2x.jpg 2x
                     "
                     type="image/jpeg"
                   />
@@ -116,8 +116,8 @@
                   />
                   <source
                     srcset="
-                      ./images/mobile-images/mobile-work-img-2.jpeg    1x,
-                      ./images/mobile-images/mobile-work-img-2@2x.jpeg 2x
+                      ./images/mobile-images/mobile-work-img-2.jpg    1x,
+                      ./images/mobile-images/mobile-work-img-2@2x.jpg 2x
                     "
                     type="image/jpeg"
                   />
@@ -165,8 +165,8 @@
               />
               <source
                 srcset="
-                  ./images/mobile-images/mobile-services-img-1.jpeg    1x,
-                  ./images/mobile-images/mobile-services-img-1@2x.jpeg 2x
+                  ./images/mobile-images/mobile-services-img-1.jpg    1x,
+                  ./images/mobile-images/mobile-services-img-1@2x.jpg 2x
                 "
                 type="image/jpeg"
               />
@@ -185,8 +185,8 @@
               />
               <source
                 srcset="
-                  ./images/mobile-images/mobile-services-img-2.jpeg    1x,
-                  ./images/mobile-images/mobile-services-img-2@2x.jpeg 2x
+                  ./images/mobile-images/mobile-services-img-2.jpg    1x,
+                  ./images/mobile-images/mobile-services-img-2@2x.jpg 2x
                 "
                 type="image/jpeg"
               />
@@ -208,8 +208,8 @@
               />
               <source
                 srcset="
-                  ./images/mobile-images/mobile-services-img-3.jpeg    1x,
-                  ./images/mobile-images/mobile-services-img-3@2x.jpeg 2x
+                  ./images/mobile-images/mobile-services-img-3.jpg    1x,
+                  ./images/mobile-images/mobile-services-img-3@2x.jpg 2x
                 "
                 type="image/jpeg"
               />
@@ -238,118 +238,65 @@
     </section>
 
     <!-- Sessions  -->
-    <section>
-      <h2>Sessions</h2>
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title section__title--right">Sessions</h2>
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Laoreet habitant facilisis sapien
-        massa duis. Consequat, vitae elit pellentesque fringilla. Non a, neque vitae dictum arcu.
-      </p>
+        <picture>
+          <source
+            srcset="
+              ./images/mobile-images/mobile-sessions-img.webp    1x,
+              ./images/mobile-images/mobile-sessions-img@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/mobile-images/mobile-sessions-img.jpg    1x,
+              ./images/mobile-images/mobile-sessions-img@2x.jpg 2x
+            "
+            type="image/jpeg"
+          />
+          <img src="./images/mobile-images/mobile-sessions-img.jpg" alt="Studia" />
+        </picture>
 
-      <a href="#">Watch more</a>
+        <p class="section__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Laoreet habitant facilisis sapien
+          massa duis. Consequat, vitae elit pellentesque fringilla. Non a, neque vitae dictum arcu.
+        </p>
+
+        <a class="btn btn--primary" href="#">Watch more</a>
+      </div>
     </section>
 
     <!-- Gallery  -->
-    <section>
-      <h2>Gallery</h2>
-
-      <!-- <ul>
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-
-        <li>
-          <img src="" alt="" />
-        </li>
-      </ul> -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Gallery</h2>
+      </div>
+      <div class="gallery-container">
+        <picture>
+          <source
+            srcset="
+              ./images/mobile-images/mobile-gallery-img.webp    1x,
+              ./images/mobile-images/mobile-gallery-img@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/mobile-images/mobile-gallery-img.jpg    1x,
+              ./images/mobile-images/mobile-gallery-img@2x.jpg 2x
+            "
+            type="image/jpeg"
+          />
+          <img
+            class="gallery-center"
+            src="./images/mobile-images/mobile-gallery-img.jpg"
+            alt="List photos"
+          />
+        </picture>
+      </div>
     </section>
 
     <!-- team  -->
