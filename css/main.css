@@ -427,7 +427,15 @@ img {
 .hero-section {
   padding-top: 225px;
   padding-bottom: 126px;
-  background-color: rgba(29, 29, 29, 0.85);
+  background-image: linear-gradient(rgba(29, 29, 29, 0.85), rgba(29, 29, 29, 0.85)), url("../images/mobile-images/mobile-hero-img.png");
+  background-size: contain;
+  background-position: center, 50% 74px;
+  background-repeat: no-repeat;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(rgba(29, 29, 29, 0.85), rgba(29, 29, 29, 0.85)), url("../images/mobile-images/mobile-hero-img@2x.png");
+  }
 }
 
 .hero-section__title {

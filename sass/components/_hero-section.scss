@@ -2,7 +2,15 @@
   padding-top: 225px;
   padding-bottom: 126px;
 
-  background-color: $color-hero-bg;
+  // background-color: $color-hero-bg;
+  background-image: $hero-gradient, url('../images/mobile-images/mobile-hero-img.png');
+  background-size: contain;
+  background-position: center, 50% 74px;
+  background-repeat: no-repeat;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: $hero-gradient, url('../images/mobile-images/mobile-hero-img@2x.png');
+  }
 }
 
 .hero-section__title {
