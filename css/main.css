@@ -1,4 +1,4 @@
-.services-list, .services-imgs-list, .works-list {
+.team-list, .services-list, .services-imgs-list, .works-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -334,6 +334,9 @@ img {
 .section__title--right {
   text-align: right;
 }
+.section__title--center {
+  text-align: center;
+}
 
 .section__text {
   margin-top: 18px;
@@ -481,19 +484,9 @@ img {
   flex-direction: row-reverse;
 }
 
-.work-thumb__box-title {
-  position: relative;
-  flex-shrink: 0;
-  height: 111px;
-  width: 24px;
-  background-color: #fe5d26;
-}
-
 .work-thumb__title {
-  position: absolute;
-  top: 50%;
-  left: 4px;
-  height: 100%;
+  padding: 0 4px;
+  height: 111px;
   margin: 0;
   font-weight: 500;
   font-size: 12px;
@@ -502,7 +495,8 @@ img {
   text-align: center;
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
-  transform: rotate(180deg) translateY(50%);
+  background-color: #fe5d26;
+  transform: rotate(180deg);
 }
 
 .box-work-info {
@@ -597,4 +591,18 @@ img {
   margin-right: auto;
   margin-left: auto;
   max-width: 342px;
+}
+
+.team-list__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.team-list__title {
+  padding: 8px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #ffffff;
+  background-color: #1d1d1d;
 }/*# sourceMappingURL=main.css.map */

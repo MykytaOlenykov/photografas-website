@@ -14,7 +14,6 @@
 
 .work-thumb__container {
   position: relative;
-
   display: flex;
   align-items: center;
   gap: 4px;
@@ -39,21 +38,9 @@
   }
 }
 
-.work-thumb__box-title {
-  position: relative;
-
-  flex-shrink: 0;
-  height: 111px;
-  width: 24px;
-  background-color: $color-accent;
-}
-
 .work-thumb__title {
-  position: absolute;
-  top: 50%;
-  left: 4px;
-  height: 100%;
-
+  padding: 0 4px;
+  height: 111px;
   margin: 0;
 
   font-weight: 500;
@@ -62,7 +49,10 @@
   letter-spacing: 0.03em;
   text-align: center;
   writing-mode: vertical-rl;
-  transform: rotate(180deg) translateY(50%);
+
+  background-color: $color-accent;
+
+  transform: rotate(180deg);
 }
 
 .box-work-info {

@@ -1,0 +1,19 @@
+.team-list {
+  @extend %list;
+}
+
+.team-list__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.team-list__title {
+  padding: 8px 0;
+
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $color-secondary;
+
+  background-color: $color-primary;
+}
