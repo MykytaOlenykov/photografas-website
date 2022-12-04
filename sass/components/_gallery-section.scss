@@ -1,10 +1,11 @@
 .gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 5px 16px;
   background-color: $color-primary;
 }
 
 .gallery-center {
-  margin-right: auto;
-  margin-left: auto;
   max-width: 342px;
 }

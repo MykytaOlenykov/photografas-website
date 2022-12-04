@@ -1,4 +1,4 @@
-.address-list, .team-list, .services-list, .services-imgs-list, .works-list {
+.social-network-list, .support-box__list, .about-us-box__list, .address-list, .team-list, .services-list, .services-imgs-list, .works-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -585,13 +585,14 @@ img {
 }
 
 .gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 5px 16px;
   background-color: #1d1d1d;
 }
 
 .gallery-center {
-  margin-right: auto;
-  margin-left: auto;
   max-width: 342px;
 }
 
@@ -700,5 +701,91 @@ img {
 }
 
 .page-footer {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 148px;
   background-color: #1d1d1d;
+}
+
+.page-footer__container {
+  display: flex;
+}
+
+.page-footer__logo {
+  flex-grow: 1;
+  margin-right: auto;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.page-footer__address {
+  display: none;
+}
+
+.about-us-box__descr,
+.support-box__descr {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.about-us-box__list {
+  margin-right: 16px;
+}
+
+.about-us-box__item:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.about-us-box__link,
+.support-box__link {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.about-us-box__link:hover, .about-us-box__link:focus,
+.support-box__link:hover,
+.support-box__link:focus {
+  color: #fe5d26;
+}
+
+.support-box__item {
+  margin-bottom: 4px;
+}
+.support-box__item--hidden {
+  display: none;
+}
+.support-box__item:nth-child(2) {
+  margin-bottom: 0;
+}
+
+.social-network-list {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 271px;
+  background-color: #ffffff;
+}
+
+.social-network-list__link {
+  display: block;
+  color: #1d1d1d;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-network-list__link:hover, .social-network-list__link:focus {
+  color: #fe5d26;
+}
+
+.social-network-list__icon {
+  fill: currentColor;
 }/*# sourceMappingURL=main.css.map */
