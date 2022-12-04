@@ -28,16 +28,11 @@
     text-decoration: none;
 
     border: 1px solid $color-primary;
-
-    &:hover,
-    &:focus {
-      background-color: $color-accent;
-    }
   }
-}
 
-.hero-section__btn {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+  &--center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }

@@ -14,6 +14,7 @@
 
 .work-thumb__container {
   position: relative;
+
   display: flex;
   align-items: center;
   gap: 4px;
@@ -55,13 +56,10 @@
   transform: rotate(180deg);
 }
 
-.box-work-info {
+.work-thumb__descr {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
-}
-
-.box-work-info__text {
   margin-top: 0;
   margin-bottom: 0;
 
@@ -70,7 +68,7 @@
   letter-spacing: 0.03em;
 }
 
-.box-work-info__time {
+.work-thumb__time {
   display: block;
 }
 

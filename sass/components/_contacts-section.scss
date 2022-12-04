@@ -1,0 +1,60 @@
+.contacts {
+  font-style: normal;
+}
+
+.address-list {
+  @extend %list;
+}
+
+.address-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+
+  &:not(:last-child) {
+    margin-bottom: 26px;
+  }
+}
+
+.address-list__link {
+  display: block;
+  max-width: 255px;
+  width: 100%;
+
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: $color-primary;
+
+  transition: color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
+
+.address-list__icon {
+  fill: $color-primary;
+
+  transition: fill $duration $timing-function;
+
+  .address-list__link:hover + &,
+  .address-list__link:focus + & {
+    fill: $color-accent;
+  }
+}
+
+.address-list__icon-point {
+  fill: $color-secondary;
+  stroke: $color-primary;
+
+  transition: stroke $duration $timing-function;
+
+  .address-list__link:hover + &,
+  .address-list__link:focus + & {
+    stroke: $color-accent;
+  }
+}

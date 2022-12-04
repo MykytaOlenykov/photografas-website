@@ -28,8 +28,20 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
 
+  &--small-top-padding {
+    padding-top: 15px;
+  }
+
+  &--small-bottom-padding {
+    padding-bottom: 15px;
+  }
+
   &--big-top-padding {
     padding-top: 48px;
+  }
+
+  &--big-bottom-padding {
+    padding-bottom: 96px;
   }
 }
 

@@ -2,12 +2,23 @@
   @extend %list;
 }
 
-.team-list__item:not(:last-child) {
-  margin-bottom: 16px;
+.team-list__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
 }
 
 .team-list__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 8px 0;
+  width: 100%;
 
   font-size: 16px;
   line-height: 1.5;

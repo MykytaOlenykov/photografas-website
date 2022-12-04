@@ -51,7 +51,7 @@
       <div class="container">
         <h1 class="hero-section__title">Ready to make you look rad with photography.</h1>
 
-        <button class="btn hero-section__btn" type="button">Book us now</button>
+        <button class="btn btn--center" type="button">Book us now</button>
       </div>
     </section>
 
@@ -85,13 +85,9 @@
                 <h3 class="work-thumb__title">Debby Linchen</h3>
               </div>
 
-              <div class="box-work-info">
-                <p class="box-work-info__text">Ryan Dubik</p>
-
-                <p class="box-work-info__text">
-                  <time class="box-work-info__time" datetime="2020-06-13">13 June, 2020</time>
-                </p>
-              </div>
+              <p class="work-thumb__descr">
+                Ryan Dubik<time class="work-thumb__time" datetime="2020-06-13">13 June, 2020</time>
+              </p>
             </div>
 
             <p class="works-list__text">
@@ -125,13 +121,9 @@
                 <h3 class="work-thumb__title">Emily Draplin</h3>
               </div>
 
-              <div class="box-work-info">
-                <p class="box-work-info__text">Ryan Dubik</p>
-
-                <p class="box-work-info__text">
-                  <time class="box-work-info__time" datetime="2020-06-13">13 June, 2020</time>
-                </p>
-              </div>
+              <p class="work-thumb__descr">
+                Ryan Dubik<time class="work-thumb__time" datetime="2020-06-13">13 June, 2020</time>
+              </p>
             </div>
 
             <p class="works-list__text">
@@ -295,7 +287,7 @@
       </div>
     </section>
 
-    <!-- team  -->
+    <!-- Team  -->
     <section class="section">
       <div class="container">
         <h2 class="section__title section__title--center">Our top photographers</h2>
@@ -383,71 +375,101 @@
     </section>
 
     <!-- Contacts us  -->
-    <section>
-      <h2>Contact us</h2>
+    <section class="section section--small-bottom-padding">
+      <div class="container">
+        <h2 class="section__title">Contact us</h2>
 
-      <address>
-        <ul>
-          <li>
-            <a href="#">4107th Avenue, Grassland, Alberta, Canada</a>
-          </li>
+        <address class="contacts">
+          <ul class="address-list">
+            <li class="address-list__item">
+              <a class="address-list__link" href="#">4107th Avenue, Grassland, Alberta, Canada</a>
 
-          <li>
-            <a href="tel:+4417653907">+4417653907</a>
-          </li>
+              <svg class="address-list__icon-point" width="24" height="24">
+                <use href="./images/icons.svg#icon-point"></use>
+              </svg>
+            </li>
 
-          <li>
-            <a href="mailto:Fotografas@hey.com">Fotografas@hey.com</a>
-          </li>
-        </ul>
-      </address>
+            <li class="address-list__item">
+              <a class="address-list__link" href="tel:+4417653907">+4417653907</a>
 
-      <form>
-        <p>Or message us</p>
+              <svg class="address-list__icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </li>
 
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" />
+            <li class="address-list__item">
+              <a class="address-list__link" href="mailto:Fotografas@hey.com">Fotografas@hey.com</a>
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="text" />
-
-        <label for="comment">Message</label>
-        <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
-
-        <button type="submit">Submit</button>
-      </form>
+              <svg class="address-list__icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </li>
+          </ul>
+        </address>
+      </div>
     </section>
 
-    <footer>
-      <a href="#">SVG</a>
-      <a href="#">4107th Avenue, Grassland, Alberta, Canada</a>
+    <!-- Message us  -->
+    <section class="section section--small-top-padding section--big-bottom-padding">
+      <div class="container">
+        <h2 class="section__title">Or message us</h2>
 
-      <ul>
-        <li>
-          <a href="#">Our mission</a>
-        </li>
-        <li>
-          <a href="#">The team</a>
-        </li>
-      </ul>
+        <form class="page-form">
+          <label>
+            <span class="page-form__label">Name</span>
+            <input class="page-form__input" name="name" type="text" />
+          </label>
 
-      <ul>
-        <li>FAQ</li>
-        <li>Customer service</li>
-        <li>Ask a question</li>
-      </ul>
+          <label class="page-form__field">
+            <span class="page-form__label">Email</span>
+            <input class="page-form__input" name="email" type="text" />
+          </label>
 
-      <ul>
-        <li>
-          <a href="#">SVG</a>
-        </li>
-        <li>
-          <a href="#">SVG</a>
-        </li>
-        <li>
-          <a href="#">SVG</a>
-        </li>
-      </ul>
+          <label class="page-form__field">
+            <span class="page-form__label"><span class="page-form__elem">Your </span>Message</span>
+            <textarea
+              class="page-form__input page-form__input--no-resize"
+              name="comment"
+            ></textarea>
+          </label>
+
+          <button class="btn btn--primary btn--center" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <div class="container">
+        <a href="#">SVG</a>
+        <a href="#">4107th Avenue, Grassland, Alberta, Canada</a>
+
+        <ul>
+          <li>
+            <a href="#">Our mission</a>
+          </li>
+          <li>
+            <a href="#">The team</a>
+          </li>
+        </ul>
+
+        <ul>
+          <li>FAQ</li>
+          <li>Customer service</li>
+          <li>Ask a question</li>
+        </ul>
+
+        <ul>
+          <li>
+            <a href="#">SVG</a>
+          </li>
+          <li>
+            <a href="#">SVG</a>
+          </li>
+          <li>
+            <a href="#">SVG</a>
+          </li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>
