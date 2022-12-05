@@ -9,6 +9,7 @@
 
 .page-footer__container {
   display: flex;
+  align-items: baseline;
 }
 
 .page-footer__logo {
@@ -95,7 +96,9 @@
 }
 
 .social-network-list__link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   color: $color-primary;
 

@@ -44,6 +44,12 @@
   &:focus .menu-btn__icon {
     color: $color-accent;
   }
+
+  &--close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
 }
 
 .menu-btn__icon {
@@ -51,6 +57,46 @@
 }
 
 .menu-container {
-  display: none;
   position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 30;
+
+  padding: 40px;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $color-primary-bg;
+
+  transform: translateY(-100%);
+  transition: transform $duration $timing-function;
+
+  &.active {
+    transform: translateY(0);
+  }
+}
+
+.menu-container__list {
+  @extend %list;
+}
+
+.menu-container__item {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.menu-container__link {
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: $color-primary;
+
+  transition: color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
 }

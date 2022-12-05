@@ -8,6 +8,10 @@ body {
   color: $color-primary;
 
   background-color: $color-primary-bg;
+
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 img {
