@@ -12,6 +12,13 @@ body {
   &.lock {
     overflow: hidden;
   }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 80px;
+
+    font-size: 18px;
+    line-height: 1.78;
+  }
 }
 
 img {
@@ -25,12 +32,23 @@ img {
   margin-left: auto;
   padding-right: 16px;
   padding-left: 16px;
-  max-width: 375px;
+  max-width: $mobile;
+
+  @media screen and (min-width: $desktop) {
+    padding-right: 20px;
+    padding-left: 20px;
+    max-width: $desktop;
+  }
 }
 
 .section {
   padding-top: 24px;
   padding-bottom: 24px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
   &--small-top-padding {
     padding-top: 15px;
@@ -40,16 +58,14 @@ img {
     padding-bottom: 15px;
   }
 
-  &--big-top-padding {
-    padding-top: 48px;
-  }
-
   &--big-bottom-padding {
     padding-bottom: 96px;
   }
 }
 
 .section__title {
+  position: relative;
+
   margin-top: 0;
   margin-bottom: 16px;
 
@@ -65,6 +81,12 @@ img {
 
   &--center {
     text-align: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
   }
 }
 

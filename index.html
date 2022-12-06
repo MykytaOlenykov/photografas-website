@@ -6,15 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FotoGrafas</title>
     <link rel="stylesheet" href="./css/main.min.css" />
+    <style>
+      @media screen and (max-width: 1319px) {
+        .logo__icon--desktop {
+          display: none;
+        }
+      }
+      @media screen and (min-width: 1320px) {
+        .logo__icon--mobile {
+          display: none;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="page-header">
       <div class="container">
         <nav class="site-nav">
           <a class="logo" href="#">
-            <svg class="logo__icon" aria-label="site logo" width="56" height="16">
-              <use href="./images/icons.svg#icon-mobile-logo"></use>
-            </svg>
+            <picture>
+              <svg
+                class="logo__icon logo__icon--mobile"
+                aria-label="site logo"
+                width="56"
+                height="16"
+              >
+                <use href="./images/icons.svg#icon-mobile-logo"></use>
+              </svg>
+              <svg
+                class="logo__icon logo__icon--desktop"
+                aria-label="site logo"
+                width="154"
+                height="22"
+              >
+                <use href="./images/icons.svg#icon-logo"></use>
+              </svg>
+            </picture>
           </a>
 
           <button class="menu-btn open-menu" type="button">
@@ -54,17 +81,29 @@
 
     <!-- Hero  -->
     <section class="hero-section">
-      <div class="container">
-        <h1 class="hero-section__title">Ready to make you look rad with photography.</h1>
+      <div class="container hero-section__container">
+        <img
+          class="hero-section__img"
+          srcset="
+            ./images/desktop-images/desktop-hero-img.png    1x,
+            ./images/desktop-images/desktop-hero-img@2x.png 2x
+          "
+          src="./images/desktop-images/desktop-hero-img.png"
+          alt="Photographer"
+        />
 
-        <button class="btn btn--center" type="button">Book us now</button>
+        <div class="hero-section__box">
+          <h1 class="hero-section__title">Ready to make you look rad with photography.</h1>
+
+          <button class="btn btn--center" type="button">Book us now</button>
+        </div>
       </div>
     </section>
 
     <!-- works  -->
-    <section class="section section--big-top-padding">
+    <section class="section section--big-top-padding works-section">
       <div class="container">
-        <h2 class="section__title">Latest work</h2>
+        <h2 class="section__title section__title--rigth-line works-section__title">Latest work</h2>
 
         <ul class="works-list">
           <li class="works-list__item">
@@ -76,12 +115,28 @@
                       ./images/mobile-images/mobile-work-img-1.webp    1x,
                       ./images/mobile-images/mobile-work-img-1@2x.webp 2x
                     "
+                    media="(max-width: 1319px)"
                     type="image/webp"
                   />
                   <source
                     srcset="
                       ./images/mobile-images/mobile-work-img-1.jpg    1x,
                       ./images/mobile-images/mobile-work-img-1@2x.jpg 2x
+                    "
+                    media="(max-width: 1319px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop-images/desktop-work-img-1.webp    1x,
+                      ./images/desktop-images/desktop-work-img-1@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop-images/desktop-work-img-1.jpg    1x,
+                      ./images/desktop-images/desktop-work-img-1@2x.jpg 2x
                     "
                     type="image/jpeg"
                   />
@@ -112,12 +167,28 @@
                       ./images/mobile-images/mobile-work-img-2.webp    1x,
                       ./images/mobile-images/mobile-work-img-2@2x.webp 2x
                     "
+                    media="(max-width: 1319px)"
                     type="image/webp"
                   />
                   <source
                     srcset="
                       ./images/mobile-images/mobile-work-img-2.jpg    1x,
                       ./images/mobile-images/mobile-work-img-2@2x.jpg 2x
+                    "
+                    media="(max-width: 1319px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop-images/desktop-work-img-2.webp    1x,
+                      ./images/desktop-images/desktop-work-img-2@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/desktop-images/desktop-work-img-2.jpg    1x,
+                      ./images/desktop-images/desktop-work-img-2@2x.jpg 2x
                     "
                     type="image/jpeg"
                   />
@@ -127,7 +198,7 @@
                 <h3 class="work-thumb__title">Emily Draplin</h3>
               </div>
 
-              <p class="work-thumb__descr">
+              <p class="work-thumb__descr work-thumb__descr--left">
                 Ryan Dubik<time class="work-thumb__time" datetime="2020-06-13">13 June, 2020</time>
               </p>
             </div>
@@ -144,8 +215,8 @@
 
     <!-- Services  -->
     <section class="section">
-      <div class="container">
-        <h2 class="section__title">Services</h2>
+      <div class="container services-container">
+        <h2 class="section__title services-container__title">Services</h2>
 
         <ul class="services-imgs-list">
           <li class="services-imgs-list__item">
@@ -155,12 +226,28 @@
                   ./images/mobile-images/mobile-services-img-1.webp    1x,
                   ./images/mobile-images/mobile-services-img-1@2x.webp 2x
                 "
+                media="(max-width: 1319px)"
                 type="image/webp"
               />
               <source
                 srcset="
                   ./images/mobile-images/mobile-services-img-1.jpg    1x,
                   ./images/mobile-images/mobile-services-img-1@2x.jpg 2x
+                "
+                media="(max-width: 1319px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="
+                  ./images/desktop-images/desktop-services-img-1.webp    1x,
+                  ./images/desktop-images/desktop-services-img-1@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/desktop-images/desktop-services-img-1.jpg    1x,
+                  ./images/desktop-images/desktop-services-img-1@2x.jpg 2x
                 "
                 type="image/jpeg"
               />
@@ -175,12 +262,28 @@
                   ./images/mobile-images/mobile-services-img-2.webp    1x,
                   ./images/mobile-images/mobile-services-img-2@2x.webp 2x
                 "
+                media="(max-width: 1319px)"
                 type="image/webp"
               />
               <source
                 srcset="
                   ./images/mobile-images/mobile-services-img-2.jpg    1x,
                   ./images/mobile-images/mobile-services-img-2@2x.jpg 2x
+                "
+                media="(max-width: 1319px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="
+                  ./images/desktop-images/desktop-services-img-2.webp    1x,
+                  ./images/desktop-images/desktop-services-img-2@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/desktop-images/desktop-services-img-2.jpg    1x,
+                  ./images/desktop-images/desktop-services-img-2@2x.jpg 2x
                 "
                 type="image/jpeg"
               />
@@ -198,12 +301,28 @@
                   ./images/mobile-images/mobile-services-img-3.webp    1x,
                   ./images/mobile-images/mobile-services-img-3@2x.webp 2x
                 "
+                media="(max-width: 1319px)"
                 type="image/webp"
               />
               <source
                 srcset="
                   ./images/mobile-images/mobile-services-img-3.jpg    1x,
                   ./images/mobile-images/mobile-services-img-3@2x.jpg 2x
+                "
+                media="(max-width: 1319px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="
+                  ./images/desktop-images/desktop-services-img-3.webp    1x,
+                  ./images/desktop-images/desktop-services-img-3@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/desktop-images/desktop-services-img-3.jpg    1x,
+                  ./images/desktop-images/desktop-services-img-3@2x.jpg 2x
                 "
                 type="image/jpeg"
               />
@@ -212,6 +331,7 @@
           </li>
         </ul>
 
+        <!-- <div class="services-box"> -->
         <ul class="services-list">
           <li class="services-list__item">
             Lorem ipsum dolor sit amet<span class="symbol-hidden">,</span>
@@ -228,6 +348,7 @@
         </ul>
 
         <a class="btn btn--primary" href="#">See more</a>
+        <!-- </div> -->
       </div>
     </section>
 

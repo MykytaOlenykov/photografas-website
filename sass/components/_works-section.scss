@@ -1,15 +1,66 @@
+.works-section {
+  position: relative;
+
+  padding-top: 48px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 89px;
+  }
+}
+
+.works-section__title {
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+
+    margin-bottom: 0;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 221px;
+      content: '';
+      display: block;
+      height: 4px;
+      width: 180px;
+
+      background-color: $color-accent;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+
+      transform: translateY(-50%);
+    }
+  }
+}
+
 .works-list {
   @extend %list;
 }
 
-.works-list__item:not(:last-child) {
-  margin-bottom: 24px;
+.works-list__item {
+  &:not(:last-child) {
+    margin-bottom: 24px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 48px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    &:nth-child(2n) {
+      flex-direction: row;
+    }
+  }
 }
 
 .work-thumb {
-  display: flex;
-  flex-wrap: wrap;
   margin-bottom: 16px;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .work-thumb__container {
@@ -22,7 +73,7 @@
 
   &::after {
     position: absolute;
-    left: 0;
+    right: 0;
     bottom: -13px;
 
     content: '';
@@ -32,10 +83,31 @@
 
     background-color: $color-accent;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+
+    @media screen and (min-width: $desktop) {
+      bottom: -40px;
+
+      height: 4px;
+      width: 620px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 40px;
+    flex-direction: row-reverse;
+    margin-bottom: 48px;
   }
 
   &--reverse {
     flex-direction: row-reverse;
+
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+
+      &::after {
+        left: 0;
+      }
+    }
   }
 }
 
@@ -54,18 +126,39 @@
   background-color: $color-accent;
 
   transform: rotate(180deg);
+
+  @media screen and (min-width: $desktop) {
+    padding: 0 19px;
+    height: 290px;
+
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+  }
 }
 
 .work-thumb__descr {
   display: flex;
   justify-content: space-between;
-  flex-grow: 1;
   margin-top: 0;
   margin-bottom: 0;
 
   font-size: 10px;
   line-height: 1.6;
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: $desktop) {
+    margin-left: auto;
+    max-width: 620px;
+
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+
+    &--left {
+      margin-left: 0;
+    }
+  }
 }
 
 .work-thumb__time {
@@ -77,4 +170,9 @@
   margin-bottom: 0;
 
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 116px;
+    width: 510px;
+  }
 }

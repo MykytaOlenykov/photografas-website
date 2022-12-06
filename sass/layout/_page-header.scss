@@ -12,12 +12,22 @@
   background-color: $color-primary-bg;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 80px;
+  }
 }
 
 .site-nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+
+  @media screen and (min-width: $desktop) {
+    align-items: center;
+  }
 }
 
 .logo {
@@ -25,6 +35,10 @@
   padding: 8px 0;
   width: 56px;
   height: 32px;
+}
+
+.logo__icon {
+  fill: $color-primary;
 }
 
 .menu-btn {
@@ -50,6 +64,10 @@
     top: 10px;
     right: 10px;
   }
+
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
 }
 
 .menu-btn__icon {
@@ -57,36 +75,53 @@
 }
 
 .menu-container {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 30;
+  @media screen and (max-width: calc($desktop - 1px)) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 30;
 
-  padding: 40px;
-  width: 100vw;
-  height: 100vh;
+    padding: 40px;
+    width: 100vw;
+    height: 100vh;
 
-  background-color: $color-primary-bg;
+    background-color: $color-primary-bg;
 
-  transform: translateY(-100%);
-  transition: transform $duration $timing-function;
+    overflow-y: scroll;
+    transform: translateY(-100%);
+    transition: transform $duration $timing-function;
 
-  &.active {
-    transform: translateY(0);
+    &.active {
+      transform: translateY(0);
+    }
   }
 }
 
 .menu-container__list {
   @extend %list;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    gap: 48px;
+  }
 }
 
 .menu-container__item {
-  &:not(:last-child) {
-    margin-bottom: 10px;
+  @media screen and (max-width: calc($desktop - 1px)) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 
 .menu-container__link {
+  display: inline-block;
+
   font-size: 24px;
   line-height: 1.33;
   letter-spacing: 0.03em;
@@ -98,5 +133,9 @@
   &:hover,
   &:focus {
     color: $color-accent;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: block;
   }
 }
