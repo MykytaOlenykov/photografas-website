@@ -1,9 +1,26 @@
+.contacts-section {
+  padding-bottom: 15px;
+
+  @media screen {
+    padding-bottom: 20px;
+  }
+}
+
+.contacts-section__title {
+  margin-bottom: 32px;
+}
+
 .contacts {
   font-style: normal;
 }
 
 .address-list {
   @extend %list;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    gap: 150px;
+  }
 }
 
 .address-list__item {
@@ -12,8 +29,18 @@
   justify-content: space-between;
   flex-direction: row-reverse;
 
-  &:not(:last-child) {
-    margin-bottom: 26px;
+  @media screen and (max-width: calc($desktop - 1px)) {
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 24px;
+    width: 290px;
   }
 }
 
@@ -33,6 +60,12 @@
   &:hover,
   &:focus {
     color: $color-accent;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
   }
 }
 

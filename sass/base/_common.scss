@@ -49,18 +49,6 @@ img {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-
-  &--small-top-padding {
-    padding-top: 15px;
-  }
-
-  &--small-bottom-padding {
-    padding-bottom: 15px;
-  }
-
-  &--big-bottom-padding {
-    padding-bottom: 96px;
-  }
 }
 
 .section__title {
@@ -75,25 +63,9 @@ img {
   letter-spacing: 0.03em;
   text-transform: capitalize;
 
-  &--right {
-    text-align: right;
-  }
-
-  &--center {
-    text-align: center;
-  }
-
   @media screen and (min-width: $desktop) {
     font-size: 32px;
     line-height: 1.25;
     letter-spacing: 0.03em;
   }
-}
-
-.section__text {
-  margin-top: 18px;
-  margin-bottom: 16px;
-  max-width: 255px;
-
-  letter-spacing: 0.03em;
 }

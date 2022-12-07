@@ -1,0 +1,90 @@
+.callback-section {
+  padding-top: 15px;
+  padding-bottom: 96px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 20px;
+  }
+}
+
+.callback-section__title {
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 24px;
+
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+  }
+}
+
+.page-form {
+  padding: 0 8px;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    padding: 0;
+    width: 840px;
+  }
+}
+
+.page-form__field {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.page-form__label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 15px;
+  }
+}
+
+.page-form__input {
+  display: block;
+  padding: 12px 16px;
+  width: 100%;
+  height: 48px;
+
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  color: $color-primary;
+
+  border: 0.5px solid $color-primary;
+  filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.05));
+  outline: none;
+
+  transition: border-color $duration $timing-function;
+
+  @media screen and (min-width: $desktop) {
+    height: 72px;
+    width: 400px;
+  }
+
+  &:focus {
+    border-color: $color-accent;
+  }
+
+  &--comment {
+    height: 144px;
+    resize: none;
+
+    @media screen and (min-width: $desktop) {
+      height: 216px;
+      width: 840px;
+    }
+  }
+}
+
+.page-form__comment {
+  display: block;
+  margin-bottom: 32px;
+}

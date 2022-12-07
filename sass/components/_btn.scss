@@ -17,6 +17,17 @@
 
   transition: background-color $duration $timing-function;
 
+  @media screen and (min-width: $desktop) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 290px;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+  }
+
   &:hover,
   &:focus {
     background-color: $color-accent;
@@ -36,16 +47,5 @@
       margin-right: auto;
       margin-left: auto;
     }
-  }
-
-  @media screen and (min-width: $desktop) {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 290px;
-
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.33;
-    letter-spacing: 0.03em;
   }
 }

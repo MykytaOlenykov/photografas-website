@@ -17,6 +17,22 @@
           display: none;
         }
       }
+
+      .address-list__icon,
+      .address-list__icon-point,
+      .social-network-list__icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      @media screen and (min-width: 1320px) {
+        .address-list__icon,
+        .address-list__icon-point,
+        .social-network-list__icon {
+          width: 40px;
+          height: 40px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -331,7 +347,6 @@
           </li>
         </ul>
 
-        <!-- <div class="services-box"> -->
         <ul class="services-list">
           <li class="services-list__item">
             Lorem ipsum dolor sit amet<span class="symbol-hidden">,</span>
@@ -348,39 +363,63 @@
         </ul>
 
         <a class="btn btn--primary" href="#">See more</a>
-        <!-- </div> -->
       </div>
     </section>
 
     <!-- Sessions  -->
     <section class="section">
-      <div class="container">
-        <h2 class="section__title section__title--right">Sessions</h2>
+      <div class="container sessions-container">
+        <div class="sessions-box">
+          <h2 class="section__title sessions-container__title sessions-container__title--right">
+            Sessions
+          </h2>
 
-        <picture>
-          <source
-            srcset="
-              ./images/mobile-images/mobile-sessions-img.webp    1x,
-              ./images/mobile-images/mobile-sessions-img@2x.webp 2x
-            "
-            type="image/webp"
-          />
-          <source
-            srcset="
-              ./images/mobile-images/mobile-sessions-img.jpg    1x,
-              ./images/mobile-images/mobile-sessions-img@2x.jpg 2x
-            "
-            type="image/jpeg"
-          />
-          <img src="./images/mobile-images/mobile-sessions-img.jpg" alt="Studia" />
-        </picture>
+          <picture>
+            <source
+              srcset="
+                ./images/mobile-images/mobile-sessions-img.webp    1x,
+                ./images/mobile-images/mobile-sessions-img@2x.webp 2x
+              "
+              media="(max-width: 1319px)"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/mobile-images/mobile-sessions-img.jpg    1x,
+                ./images/mobile-images/mobile-sessions-img@2x.jpg 2x
+              "
+              media="(max-width: 1319px)"
+              type="image/jpeg"
+            />
+            <source
+              srcset="
+                ./images/desktop-images/desktop-sessions-img.webp    1x,
+                ./images/desktop-images/desktop-sessions-img@2x.webp 2x
+              "
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./images/desktop-images/desktop-sessions-img.jpg    1x,
+                ./images/desktop-images/desktop-sessions-img@2x.jpg 2x
+              "
+              type="image/jpeg"
+            />
+            <img
+              class="sessions-box__img"
+              src="./images/mobile-images/mobile-sessions-img.jpg"
+              alt="Studia"
+            />
+          </picture>
 
-        <p class="section__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Laoreet habitant facilisis sapien
-          massa duis. Consequat, vitae elit pellentesque fringilla. Non a, neque vitae dictum arcu.
-        </p>
+          <p class="sessions-box__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Laoreet habitant facilisis
+            sapien massa duis. Consequat, vitae elit pellentesque fringilla. Non a, neque vitae
+            dictum arcu.
+          </p>
 
-        <a class="btn btn--primary" href="#">Watch more</a>
+          <a class="btn btn--primary" href="#">Watch more</a>
+        </div>
       </div>
     </section>
 
@@ -396,6 +435,7 @@
               ./images/mobile-images/mobile-gallery-img.webp    1x,
               ./images/mobile-images/mobile-gallery-img@2x.webp 2x
             "
+            media="(max-width: 1319px)"
             type="image/webp"
           />
           <source
@@ -403,10 +443,25 @@
               ./images/mobile-images/mobile-gallery-img.jpg    1x,
               ./images/mobile-images/mobile-gallery-img@2x.jpg 2x
             "
+            media="(max-width: 1319px)"
+            type="image/jpeg"
+          />
+          <source
+            srcset="
+              ./images/desktop-images/desktop-gallery-img.webp    1x,
+              ./images/desktop-images/desktop-gallery-img@2x.webp 2x
+            "
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/desktop-images/desktop-gallery-img.jpg    1x,
+              ./images/desktop-images/desktop-gallery-img@2x.jpg 2x
+            "
             type="image/jpeg"
           />
           <img
-            class="gallery-center"
+            class="gallery-container__img"
             src="./images/mobile-images/mobile-gallery-img.jpg"
             alt="List photos"
           />
@@ -416,8 +471,10 @@
 
     <!-- Team  -->
     <section class="section">
-      <div class="container">
-        <h2 class="section__title section__title--center">Our top photographers</h2>
+      <div class="container team-container">
+        <h2 class="section__title team-container__title team-container__title--center">
+          Our top photographers
+        </h2>
 
         <ul class="team-list">
           <li class="team-list__item">
@@ -427,12 +484,28 @@
                   ./images/mobile-images/mobile-person-img-1.webp    1x,
                   ./images/mobile-images/mobile-person-img-1@2x.webp 2x
                 "
+                media="(max-width: 1319px)"
                 type="image/webp"
               />
               <source
                 srcset="
                   ./images/mobile-images/mobile-person-img-1.jpg    1x,
                   ./images/mobile-images/mobile-person-img-1@2x.jpg 2x
+                "
+                media="(max-width: 1319px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="
+                  ./images/desktop-images/desktop-person-img-1.webp    1x,
+                  ./images/desktop-images/desktop-person-img-1@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/desktop-images/desktop-person-img-1.jpg    1x,
+                  ./images/desktop-images/desktop-person-img-1@2x.jpg 2x
                 "
                 type="image/jpeg"
               />
@@ -453,12 +526,28 @@
                   ./images/mobile-images/mobile-person-img-2.webp    1x,
                   ./images/mobile-images/mobile-person-img-2@2x.webp 2x
                 "
+                media="(max-width: 1319px)"
                 type="image/webp"
               />
               <source
                 srcset="
                   ./images/mobile-images/mobile-person-img-2.jpg    1x,
                   ./images/mobile-images/mobile-person-img-2@2x.jpg 2x
+                "
+                media="(max-width: 1319px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="
+                  ./images/desktop-images/desktop-person-img-2.webp    1x,
+                  ./images/desktop-images/desktop-person-img-2@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/desktop-images/desktop-person-img-2.jpg    1x,
+                  ./images/desktop-images/desktop-person-img-2@2x.jpg 2x
                 "
                 type="image/jpeg"
               />
@@ -479,12 +568,28 @@
                   ./images/mobile-images/mobile-person-img-3.webp    1x,
                   ./images/mobile-images/mobile-person-img-3@2x.webp 2x
                 "
+                media="(max-width: 1319px)"
                 type="image/webp"
               />
               <source
                 srcset="
                   ./images/mobile-images/mobile-person-img-3.jpg    1x,
                   ./images/mobile-images/mobile-person-img-3@2x.jpg 2x
+                "
+                media="(max-width: 1319px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="
+                  ./images/desktop-images/desktop-person-img-3.webp    1x,
+                  ./images/desktop-images/desktop-person-img-3@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/desktop-images/desktop-person-img-3.jpg    1x,
+                  ./images/desktop-images/desktop-person-img-3@2x.jpg 2x
                 "
                 type="image/jpeg"
               />
@@ -502,16 +607,16 @@
     </section>
 
     <!-- Contacts us  -->
-    <section class="section section--small-bottom-padding">
+    <section class="section contacts-section">
       <div class="container">
-        <h2 class="section__title">Contact us</h2>
+        <h2 class="section__title contacts-section__title">Contact us</h2>
 
         <address class="contacts">
           <ul class="address-list">
             <li class="address-list__item">
               <a class="address-list__link" href="#">4107th Avenue, Grassland, Alberta, Canada</a>
 
-              <svg class="address-list__icon-point" width="24" height="24">
+              <svg class="address-list__icon-point">
                 <use href="./images/icons.svg#icon-point"></use>
               </svg>
             </li>
@@ -519,7 +624,7 @@
             <li class="address-list__item">
               <a class="address-list__link" href="tel:+4417653907">+4417653907</a>
 
-              <svg class="address-list__icon" width="24" height="24">
+              <svg class="address-list__icon">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </li>
@@ -527,7 +632,7 @@
             <li class="address-list__item">
               <a class="address-list__link" href="mailto:Fotografas@hey.com">Fotografas@hey.com</a>
 
-              <svg class="address-list__icon" width="24" height="24">
+              <svg class="address-list__icon">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </li>
@@ -537,12 +642,14 @@
     </section>
 
     <!-- Message us  -->
-    <section class="section section--small-top-padding section--big-bottom-padding">
+    <section
+      class="section callback-section section--small-top-padding section--big-bottom-padding"
+    >
       <div class="container">
-        <h2 class="section__title">Or message us</h2>
+        <h2 class="section__title callback-section__title">Or message us</h2>
 
         <form class="page-form">
-          <label>
+          <label class="page-form__field">
             <span class="page-form__label">Name</span>
             <input class="page-form__input" name="name" type="text" />
           </label>
@@ -552,12 +659,9 @@
             <input class="page-form__input" name="email" type="text" />
           </label>
 
-          <label class="page-form__field">
+          <label class="page-form__comment">
             <span class="page-form__label"><span class="page-form__elem">Your </span>Message</span>
-            <textarea
-              class="page-form__input page-form__input--no-resize"
-              name="comment"
-            ></textarea>
+            <textarea class="page-form__input page-form__input--comment" name="comment"></textarea>
           </label>
 
           <button class="btn btn--primary btn--center" type="submit">Submit</button>
@@ -567,8 +671,10 @@
 
     <footer class="page-footer">
       <div class="container page-footer__container">
-        <a class="page-footer__logo" href="#">Fotografas</a>
-        <a class="page-footer__address" href="#">4107th Avenue, Grassland, Alberta, Canada</a>
+        <div class="page-footer__address-box">
+          <a class="page-footer__logo" href="#">Fotografas</a>
+          <a class="page-footer__address" href="#">4107th Avenue, Grassland, Alberta, Canada</a>
+        </div>
 
         <div class="about-us-box">
           <p class="about-us-box__descr">About Us</p>
@@ -605,7 +711,7 @@
         <ul class="social-network-list">
           <li class="social-network-list__item">
             <a class="social-network-list__link" href="#">
-              <svg class="social-network-list__icon" width="24" height="24">
+              <svg class="social-network-list__icon">
                 <use href="./images/icons.svg#icon-twitter"></use>
               </svg>
             </a>
@@ -613,7 +719,7 @@
 
           <li class="social-network-list__item">
             <a class="social-network-list__link" href="#">
-              <svg class="social-network-list__icon" width="24" height="24">
+              <svg class="social-network-list__icon">
                 <use href="./images/icons.svg#icon-instagram"></use>
               </svg>
             </a>
@@ -621,7 +727,7 @@
 
           <li class="social-network-list__item">
             <a class="social-network-list__link" href="#">
-              <svg class="social-network-list__icon" width="24" height="24">
+              <svg class="social-network-list__icon">
                 <use href="./images/icons.svg#icon-facebook"></use>
               </svg>
             </a>

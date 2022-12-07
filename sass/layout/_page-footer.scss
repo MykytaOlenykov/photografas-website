@@ -5,6 +5,11 @@
   padding-bottom: 148px;
 
   background-color: $color-primary;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 116px;
+    padding-bottom: 254px;
+  }
 }
 
 .page-footer__container {
@@ -12,19 +17,53 @@
   align-items: baseline;
 }
 
-.page-footer__logo {
-  flex-grow: 1;
+.page-footer__address-box {
   margin-right: auto;
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 150px;
+    width: 288px;
+  }
+}
+
+.page-footer__logo {
+  display: inline-block;
 
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: 0.03em;
   text-decoration: none;
   color: $color-secondary;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 21px;
+
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+  }
 }
 
 .page-footer__address {
   display: none;
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: $color-secondary;
+  }
+}
+
+.about-us-box {
+  margin-right: 16px;
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 191px;
+  }
 }
 
 .about-us-box__descr,
@@ -33,16 +72,26 @@
   margin-bottom: 8px;
 
   color: $color-secondary;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 16px;
+
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+  }
 }
 
 .about-us-box__list {
   @extend %list;
-
-  margin-right: 16px;
 }
 
 .about-us-box__item:not(:last-child) {
   margin-bottom: 4px;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 8px;
+  }
 }
 
 .about-us-box__link,
@@ -55,6 +104,12 @@
 
   transition: color $duration $timing-function;
 
+  @media screen and (min-width: $desktop) {
+    font-size: 24px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+  }
+
   &:hover,
   &:focus {
     color: $color-accent;
@@ -66,14 +121,22 @@
 }
 
 .support-box__item {
-  margin-bottom: 4px;
+  @media screen and (max-width: calc($desktop - 1px)) {
+    margin-bottom: 4px;
 
-  &--hidden {
-    display: none;
+    &--hidden {
+      display: none;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 0;
+    }
   }
 
-  &:nth-child(2) {
-    margin-bottom: 0;
+  @media screen and (min-width: $desktop) {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
   }
 }
 
@@ -90,9 +153,18 @@
   gap: 64px;
   padding-top: 12px;
   padding-bottom: 12px;
-  width: 271px;
+  padding-right: 31px;
+  padding-left: 40px;
 
   background-color: $color-primary-bg;
+
+  @media screen and (min-width: $desktop) {
+    gap: 32px;
+    padding-top: 44px;
+    padding-bottom: 44px;
+    padding-right: 106px;
+    padding-left: 80px;
+  }
 }
 
 .social-network-list__link {
