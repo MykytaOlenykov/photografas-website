@@ -1,44 +1,60 @@
 .hero-section {
-  @media screen and (max-width: calc($desktop - 1px)) {
-    padding-top: 225px;
-    padding-bottom: 126px;
+  position: relative;
 
-    background-image: $hero-gradient, url('../images/mobile-images/mobile-hero-img.png');
-    background-size: contain;
-    background-position: center, 50% 74px;
-    background-repeat: no-repeat;
+  @media screen and (min-width: $desktop) {
+    background-color: $color-primary;
+  }
+}
 
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: $hero-gradient, url('../images/mobile-images/mobile-hero-img@2x.png');
-    }
+.hero-section__container {
+  padding-top: 225px;
+  padding-bottom: 126px;
+
+  background-image: url('../images/mobile-images/mobile-hero-img.png');
+  background-size: contain;
+  background-position: 50% 72px;
+  background-repeat: no-repeat;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url('../images/mobile-images/mobile-hero-img@2x.png');
   }
 
   @media screen and (min-width: $desktop) {
     padding-top: 206px;
     padding-bottom: 131px;
 
-    background-color: $color-primary;
+    background-image: url('../images/desktop-images/desktop-hero-img.png');
+    background-size: 620px 593px;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/desktop-images/desktop-hero-img@2x.png');
+    }
   }
-}
-
-.hero-section__container {
-  position: relative;
-}
-
-.hero-section__img {
-  position: absolute;
-  bottom: -131px;
-  left: 0;
-
-  width: 620px;
 
   @media screen and (max-width: calc($desktop - 1px)) {
-    display: none;
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+
+      content: '';
+      display: block;
+      min-height: 557px;
+      width: 100vw;
+
+      background: $hero-gradient;
+    }
   }
 }
 
-@media screen and (min-width: $desktop) {
-  .hero-section__box {
+.hero-section__box {
+  position: relative;
+  z-index: 1;
+
+  @media screen and (min-width: $desktop) {
     display: flex;
     flex-direction: column;
     margin-left: auto;
