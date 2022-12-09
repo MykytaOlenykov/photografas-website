@@ -87,11 +87,13 @@
 
     background-color: $color-primary-bg;
 
+    visibility: hidden;
     overflow-y: scroll;
     transform: translateY(-100%);
     transition: transform $duration $timing-function;
 
     &.active {
+      visibility: visible;
       transform: translateY(0);
     }
   }
