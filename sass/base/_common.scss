@@ -42,13 +42,18 @@ img {
 }
 
 .section {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  position: relative;
+
+  padding-top: 48px;
 
   @media screen and (min-width: $desktop) {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 80px;
   }
+}
+
+.anchor {
+  position: absolute;
+  top: -24px;
 }
 
 .section__title {

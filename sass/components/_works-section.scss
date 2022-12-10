@@ -1,8 +1,6 @@
 .works-section {
   position: relative;
 
-  padding-top: 48px;
-
   @media screen and (min-width: $desktop) {
     padding-top: 89px;
   }
@@ -111,9 +109,27 @@
   }
 }
 
-.work-thumb__title {
-  padding: 0 4px;
+.work-thumb__box {
+  position: relative;
+
+  flex-shrink: 0;
   height: 111px;
+  width: 24px;
+
+  background-color: $color-accent;
+
+  @media screen and (min-width: $desktop) {
+    width: 70px;
+    height: 290px;
+  }
+}
+
+.work-thumb__title {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  height: 100%;
+
   margin: 0;
 
   font-weight: 500;
@@ -123,13 +139,10 @@
   text-align: center;
   writing-mode: vertical-rl;
 
-  background-color: $color-accent;
-
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateY(50%);
 
   @media screen and (min-width: $desktop) {
-    padding: 0 19px;
-    height: 290px;
+    left: 19px;
 
     font-size: 24px;
     line-height: 1.33;
