@@ -344,6 +344,9 @@ img {
 .anchor {
   position: absolute;
   top: -24px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .section__title {
