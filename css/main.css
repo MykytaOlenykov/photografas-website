@@ -967,11 +967,21 @@ img {
   }
 }
 @media screen and (min-width: 1320px) {
-  .sessions-box__img {
+  .sessions-box__thumb {
     position: absolute;
     left: 20px;
     top: 0;
     width: 620px;
+  }
+  .sessions-box__thumb::after {
+    position: absolute;
+    top: 72px;
+    right: 0;
+    content: "";
+    display: block;
+    width: 70px;
+    height: 290px;
+    background-color: #fe5d26;
   }
 }
 .sessions-box__text {
