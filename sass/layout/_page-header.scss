@@ -20,14 +20,10 @@
   }
 }
 
-.site-nav {
+.page-header__container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-end;
-
-  @media screen and (min-width: $desktop) {
-    align-items: center;
-  }
 }
 
 .logo {
@@ -35,6 +31,11 @@
   padding: 8px 0;
   width: 56px;
   height: 32px;
+
+  @media screen and (min-width: $desktop) {
+    width: 154px;
+    height: 39px;
+  }
 }
 
 .logo__icon {
@@ -99,7 +100,7 @@
   }
 }
 
-.menu-container__list {
+.site-nav__list {
   @extend %list;
 
   @media screen and (min-width: $desktop) {
@@ -108,7 +109,7 @@
   }
 }
 
-.menu-container__item {
+.site-nav__item {
   @media screen and (max-width: calc($desktop - 1px)) {
     &:not(:last-child) {
       margin-bottom: 10px;
@@ -121,7 +122,7 @@
   }
 }
 
-.menu-container__link {
+.site-nav__link {
   display: inline-block;
 
   font-size: 24px;
